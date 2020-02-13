@@ -22,3 +22,39 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|image|string|
+|email|string|null: false|unique: true|
+|password|string|null: false|unique: true|
+
+### Association
+- has_many :puzzles
+
+## puzzlesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|title|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :tasks
+- belongs_to :user
+
+
+
+## tasksテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|content|text|null: false|
+|puzzle_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :puzzle
