@@ -1,0 +1,36 @@
+.header {
+  background-color: #343a40;
+  height: 65px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  &__menus{
+    list-style: none;
+    line-height: 65px;
+    display: flex;
+
+  }
+  &__menu{
+    padding:0 25px;
+    &--link{
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.main{
+  height: calc(100vh - 65px);
+  display: flex;
+  .sideMenu{
+    width: 270px;
+    background-color: #c0c0c0;
+  }
+  .contents{
+    width: calc(100vw - 270px);
+    background-color: #fff;
+    height: 100%;
+  }
+}

@@ -1,35 +1,33 @@
-.header {
-  background-color: #343a40;
-  height: 65px;
-  width: 100vw;
-  &__menus{
-    list-style: none;
-    line-height: 65px;
+.top{
+  background-color: blue;
+  &__container{
     display: flex;
-
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: calc(100vh - 65px);
+    margin-top: 65px;
   }
-  &__menu{
-    padding:0 25px;
-    &--link{
-      font-size: 18px;
-      color: #fff;
-      text-decoration: none;
+  .login{
+    border: 1px solid black;
+    width: 440px;
+    height: 620px;
+    background-color: #fff;
+    &__top{
+      background-color: #eee;
+      height: 50px;
+      border-bottom: 1px solid black;
+    }
+    &__top p{
+      line-height: 50px;
+      font-size: 28px;
+      text-align: center;
     }
   }
-}
-
-
-.main{
-  height: calc(100vh - 65px);
-  display: flex;
-  .sideMenu{
-    width: 270px;
-    background-color: #c0c0c0;
-  }
-  .contents{
-    width: calc(100vw - 270px);
+  .intro{
+    border: 1px solid black;
+    width: 750px;
+    height: 620px;
     background-color: #fff;
-    height: 100%;
   }
-
 }
