@@ -10,6 +10,27 @@
   </head>
 
   <body>
+  <div class="header">
+<ul class="header__menus">
+
+    <li class="header__menu">
+      <%= link_to "タスクパズル", root_path, class: "header__menu--link" %>
+    </li>
+    <li class="header__menu">
+      <%= link_to "ユーザー一覧", root_path, class: "header__menu--link" %>
+    </li>
+    <li class="header__menu">
+      <%= link_to "ユーザー検索", root_path, class: "header__menu--link" %>
+    </li>
+    <li class="header__menu">
+      <%= link_to "パズル検索", root_path, class: "header__menu--link" %>
+    </li>
+    <li class="header__menu">
+      <%= link_to "マイページ", root_path, class: "header__menu--link" %>
+    </li>
+
+</ul>
+</div>
     <%= yield %>
   </body>
 </html>
