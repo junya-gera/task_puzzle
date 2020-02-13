@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 2020_02_13_045303) do
 
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content", null: false
-    t.bigint "user_id"
+    t.bigint "puzzle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_tasks_on_user_id"
+    t.index ["puzzle_id"], name: "index_tasks_on_puzzle_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -45,5 +45,5 @@ ActiveRecord::Schema.define(version: 2020_02_13_045303) do
   end
 
   add_foreign_key "puzzles", "users"
-  add_foreign_key "tasks", "users"
+  add_foreign_key "tasks", "puzzles"
 end
