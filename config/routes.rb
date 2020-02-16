@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     root :to => "devise/sessions#new"
 end
 
-  resources :users,   only: [:index]
+  resources :users,   only: [:index,:show]
+  get 'show', controller: :users, as: 'mypage'
+
 end

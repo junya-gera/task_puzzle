@@ -25,9 +25,14 @@
     <li class="header__menu">
       <%= link_to "パズル検索", root_path, class: "header__menu--link" %>
     </li>
+    <% if user_signed_in? %>
     <li class="header__menu">
-      <%= link_to "マイページ", root_path, class: "header__menu--link" %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__menu--link" %>
     </li>
+    <li class="header__menu myname">
+      <%= link_to current_user.name, root_path, class: "header__menu--link" %>
+    </li>
+    <% end %>
 
 </ul>
 </div>

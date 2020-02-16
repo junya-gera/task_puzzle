@@ -19,10 +19,13 @@
       text-decoration: none;
     }
   }
+  .myname{
+    margin-left: auto;
+  }
 }
 
 .main{
-  height: calc(100vh - 65px);
+  height: 100vh;
   display: flex;
   .sideMenu{
     width: 270px;

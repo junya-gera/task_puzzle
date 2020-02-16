@@ -3,11 +3,10 @@ class UsersController < ApplicationController
     
   end
 
-  def new
+  
+  def show
   end
 
-  def sign_in
-  end
 
 
 end
