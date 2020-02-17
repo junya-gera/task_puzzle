@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   has_many :puzzles
-  mount_uploader :image_name, ImageUploader
+  mount_uploader :image, ImageUploader
 
 end
