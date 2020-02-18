@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    mypage_path(resource)
+    user_path(id: current_user.id)
   end
 
   def after_sign_out_path_for(resource)
