@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 end
 
   resources :users,   only: [:index,:show]
-  get 'show', controller: :users, as: 'mypage'
+  # get 'show', controller: :users, as: 'mypage'
 
 end

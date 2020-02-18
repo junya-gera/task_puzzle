@@ -1,0 +1,40 @@
+.users--heading{
+  height: 65px;
+    width: 100%;
+    background-color: #778899;
+    font-size: 20px;
+    line-height: 65px;
+    color: #fff;
+    padding-left: 40px;
+}
+
+.user--index{
+  width: 1000px;
+  height: 100%;
+  background-color: #CDFFD3;
+  margin: 50px auto 0;
+  padding: 50px;
+
+}
+
+.user{
+  height: 230px;
+  width: 100%;
+  border-top: 1px solid silver;
+  display: flex;
+  align-items: center;
+  &__right{
+    color: black;
+    font-size: 40px;
+    padding-left: 30px;
+    &--name{
+      text-decoration: none;
+    }
+  }
+}
+
+.index--icon--image {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
