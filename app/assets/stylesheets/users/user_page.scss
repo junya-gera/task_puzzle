@@ -6,19 +6,26 @@
   &__name{
     color: #fff;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
   }
+  &__edit{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  
 }
 .icon_image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 100px;
   object-fit: cover;
+  display: block;
+  margin:0 auto;
 }
 
 .puzzle--list{
   width: 200px;
-  height: 100%;
   margin: 0 auto;
   &--name{
     text-align: center;
@@ -47,3 +54,24 @@
     padding:0 20px;
   }
 }
+
+.task--puzzle{
+  display:flex;
+  height:100%;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.task{
+  width: 540px;
+  height: 540px;
+  margin:0 30px;
+  background-color: pink;
+}
+
+.puzzle{
+  width: 540px;
+  height: 540px;
+  border: 1px solid black;
+}
+

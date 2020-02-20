@@ -8,7 +8,11 @@
       
       <div class="user--info__name">
         <p><%= @user.name %></p>
+        <% if @user.id == current_user.id %>
+        <%= link_to "プロフィール編集", edit_user_path(current_user), class: "user--info__edit", method: :get %>
+        <% end %>
       </div>
+
     </div>  
     <div class="puzzle--list">
 
@@ -26,6 +30,7 @@
   </div>
 
   <div class="contents">
+
     <ul class="contents--menus">
       <li class="contents--menu">
         <p>新規パズル作成</p>
@@ -37,5 +42,18 @@
         <p>タスク編集</p>
       </li>
     </ul>
+    <div class="task--puzzle">
+
+      <div class="task">
+      </div> 
+
+      <div class="puzzle">
+        <canvas width="540" height="540" id="stage">
+          canvas not suported.  <!-- ブラウザがcanvasに対応していなかった時ここが表示される -->
+        </canvas>
+        <canvas width="180" height="180" id="1_1"></canvas>
+      </div>
+      
+    </div>
   </div>
 </div>
