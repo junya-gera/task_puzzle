@@ -56,27 +56,28 @@ $(function() {
     const BRCtx = bottom_right.getContext("2d");
     BRCtx.fillStyle = "rgb(0, 0, 255)";
     BRCtx.fillRect(0,0,180,180); // 3_3
+    
+    const lineCtx = line.getContext("2d");
+    lineCtx.strokeStyle = "rgb(255,255,255,0.7)";
+    lineCtx.beginPath();
+    lineCtx.moveTo(180,0);
+    lineCtx.lineTo(180,540);
+    lineCtx.stroke();
 
-    ctx.strokeStyle = "rgb(255,255,255,0.7)";
-    ctx.beginPath();
-    ctx.moveTo(180,0);
-    ctx.lineTo(180,540);
-    ctx.stroke();
+    lineCtx.beginPath();
+    lineCtx.moveTo(360,0);
+    lineCtx.lineTo(360,540);
+    lineCtx.stroke();
 
-    ctx.beginPath();
-    ctx.moveTo(360,0);
-    ctx.lineTo(360,540);
-    ctx.stroke();
+    lineCtx.beginPath();
+    lineCtx.moveTo(0,180);
+    lineCtx.lineTo(540,180);
+    lineCtx.stroke();
 
-    ctx.beginPath();
-    ctx.moveTo(0,180);
-    ctx.lineTo(540,180);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.moveTo(0,360);
-    ctx.lineTo(540,360);
-    ctx.stroke();
+    lineCtx.beginPath();
+    lineCtx.moveTo(0,360);
+    lineCtx.lineTo(540,360);
+    lineCtx.stroke();
   };
     
   image.src = "/assets/puzzle1.jpg";
