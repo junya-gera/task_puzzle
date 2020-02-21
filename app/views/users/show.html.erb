@@ -44,15 +44,23 @@
     </ul>
     <div class="task--puzzle">
 
-      <div class="task">
+      <div id="task">
+        <button v-on:click="bottom_right">右下タスククリア</button>
       </div> 
 
-      <div class="puzzle">
-        <canvas width="540" height="540" id="stage">
-          canvas not suported.  <!-- ブラウザがcanvasに対応していなかった時ここが表示される -->
-        </canvas>
+      <div class="canvas--wrapper">
+        <canvas width="540" height="540" id="stage"></canvas>
+        <%# <canvas width="180" height="180" id="top_left"></canvas>
+        <canvas width="180" height="180" id="top_center"></canvas>
+        <canvas width="180" height="180" id="top_right"></canvas>
+        <canvas width="180" height="180" id="center_left"></canvas>
+        <canvas width="180" height="180" id="center_center"></canvas>
+        <canvas width="180" height="180" id="center_right"></canvas>
+        <canvas width="180" height="180" id="bottom_left"></canvas>
+        <canvas width="180" height="180" id="bottom_center"></canvas> %>
+        <canvas width="180" height="180" id="bottom_right"></canvas>
       </div>
-      
+      <input type="button" id="BRBtn">
     </div>
   </div>
 </div>

@@ -62,16 +62,29 @@
   margin-top: 30px;
 }
 
-.task{
+#task{
   width: 540px;
   height: 540px;
   margin:0 30px;
   background-color: pink;
 }
 
-.puzzle{
+.canvas--wrapper{
   width: 540px;
   height: 540px;
   border: 1px solid black;
+  position: relative;
+}
+
+#stage{
+  position: absolute;
+}
+
+#bottom_right{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: blue;
 }
 
