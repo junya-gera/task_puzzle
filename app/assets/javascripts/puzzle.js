@@ -1,5 +1,6 @@
 "use strict";
-{
+$(function() {
+  {
   const image = new Image();
   image.onload = function(e){
     const canvas = document.getElementById("stage");
@@ -54,5 +55,5 @@
     
   image.src = "/assets/puzzle1.jpg";
 
-}
-
+  }
+});
