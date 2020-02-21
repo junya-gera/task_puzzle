@@ -19,42 +19,42 @@ $(function() {
 
     const top_center = document.getElementById("top-center");
     const TCCtx = top_center.getContext("2d");
-    TCCtx.fillStyle = "rgb(0, 0, 255)";
+    TCCtx.fillStyle = "rgb(0, 130, 0)";
     TCCtx.fillRect(0,  0,180,180); // 1_2
 
     const top_right = document.getElementById("top-right");
     const TRCtx = top_right.getContext("2d");
-    TRCtx.fillStyle = "rgb(0, 0, 255)";
+    TRCtx.fillStyle = "rgb(255, 0, 255)";
     TRCtx.fillRect(0,  0,180,180); // 1_3
 
     const center_left = document.getElementById("center-left");
     const CLCtx = center_left.getContext("2d");
-    CLCtx.fillStyle = "rgb(0, 0, 255)";
+    CLCtx.fillStyle = "rgb(255, 0, 0)";
     CLCtx.fillRect(  0,0,180,180); // 2_1
 
     const center_center = document.getElementById("center-center");
     const CCCtx = center_center.getContext("2d");
-    CCCtx.fillStyle = "rgb(0, 0, 255)";
+    CCCtx.fillStyle = "rgb(0, 255, 255)";
     CCCtx.fillRect(0,0,180,180); // 2_2
 
     const center_right = document.getElementById("center-right");
     const CRCtx = center_right.getContext("2d");
-    CRCtx.fillStyle = "rgb(0, 0, 255)";
+    CRCtx.fillStyle = "rgb(130, 0, 130)";
     CRCtx.fillRect(0,0,180,180); // 2_3
 
     const bottom_left = document.getElementById("bottom-left");
     const BLCtx = bottom_left.getContext("2d");
-    BLCtx.fillStyle = "rgb(0, 0, 255)";
+    BLCtx.fillStyle = "rgb(130, 130, 0)";
     BLCtx.fillRect(  0,0,180,180); // 3_1
 
     const bottom_center = document.getElementById("bottom-center");
     const BCCtx = bottom_center.getContext("2d");
-    BCCtx.fillStyle = "rgb(0, 0, 255)";
+    BCCtx.fillStyle = "rgb(255, 0, 120)";
     BCCtx.fillRect(0,0,180,180); // 3_2
 
     const bottom_right = document.getElementById("bottom-right");
     const BRCtx = bottom_right.getContext("2d");
-    BRCtx.fillStyle = "rgb(0, 0, 255)";
+    BRCtx.fillStyle = "rgb(0, 255, 0)";
     BRCtx.fillRect(0,0,180,180); // 3_3
     
     const lineCtx = line.getContext("2d");
@@ -81,6 +81,10 @@ $(function() {
   };
     
   image.src = "/assets/puzzle1.jpg";
+
+  $('#CC-btn').click(function(){
+    $('#center-center').toggle('shake');
+  });
 
   }
 });
