@@ -1,3 +1,18 @@
+@mixin task-box{
+    content: '';
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+  }
+
+  @mixin task-show{
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 60px;
+  }
+
 
 .user--info{
   margin: 90px auto 50px;
@@ -39,6 +54,7 @@
 
 
 .contents{
+  position: relative;
   margin-top: 65px;
   &--menus{
     height: 65px;
@@ -55,6 +71,64 @@
   }
 }
 
+#modal-show{
+  cursor: pointer;
+}
+
+/* モーダル */
+.task-modal{
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 540px;
+  height: 653px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid silver;
+  &__title{
+    height: 50px;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    .fa-window-close{
+      margin-left: 150px;
+      color: red;
+      cursor: pointer;
+    }
+  }
+  &__title p{
+    line-height: 50px;
+    font-size: 28px;
+    margin-left: 10px;
+  }
+  &__edit{
+    height: 60px;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    padding:3px 0;
+  }
+  &__edit p{
+    font-size: 20px;
+    line-height: 60px;
+    padding-left: 5px;
+  }
+  &__input{
+    margin-left: 10px;
+    height: 30px;
+    font-size: 20px;
+    width: 370px;
+  }
+  &__btn{
+    margin-left: 10px;
+    height: 30px;
+    width: 50px;
+  }
+}
+
+
 .task--puzzle{
   display:flex;
   height:calc(100% - 100px);
@@ -64,10 +138,118 @@
 
 .task{
   width: 540px;
-  height: 540px;
+  height: 548px;
   margin:0 30px;
+  position: relative;
   background-color: pink;
+  .position{
+    position: absolute;
+    right: 25px;
+  }
+  &--1{
+    @include task-box;
+  }
+  &--1 p{
+    @include task-show;
+  }
+  &--2{
+    @include task-box;
+  }
+  &--2 p{
+    @include task-show;
+  }
+  &--3{
+    @include task-box;
+  }
+  &--3 p{
+    @include task-show;
+  }
+  &--4{
+    @include task-box;
+  }
+  &--4 p{
+    @include task-show;
+  }
+  &--5{
+    @include task-box;
+  }
+  &--5 p{
+    @include task-show;
+  }
+  &--6{
+    @include task-box;
+  }
+  &--6 p{
+    @include task-show;
+  }
+  &--7{
+    @include task-box;
+  }
+  &--7 p{
+    @include task-show;
+  }
+  &--8{
+    @include task-box;
+  }
+  &--8 p{
+    @include task-show;
+  }
+  &--9{
+    @include task-box;
+  }
+  &--9 p{
+    @include task-show;
+  }
 }
+
+/*チェックボタン始まり*/
+
+.round {
+  position: relative;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+/*チェックボタン終わり*/
+
+
 
 .canvas--wrapper{
   width: 540px;
