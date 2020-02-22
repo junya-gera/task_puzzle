@@ -80,27 +80,35 @@
   display: none;
   z-index: 2;
   position: absolute;
-  top: 50px;
+  top: 0;
   right: 100px;
   width: 540px;
-  height: 640px;
+  height: 653px;
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid silver;
   &__title{
     height: 50px;
     border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    .fa-window-close{
+      margin-left: 150px;
+      color: red;
+      cursor: pointer;
+    }
   }
   &__title p{
     line-height: 50px;
     font-size: 28px;
-    text-align: center;
+    margin-left: 10px;
   }
   &__edit{
     height: 60px;
     border-bottom: 1px solid silver;
     display: flex;
     align-items: center;
+    padding:3px 0;
   }
   &__edit p{
     font-size: 20px;
@@ -130,19 +138,19 @@
 
 .task{
   width: 540px;
-  height: 540px;
+  height: 548px;
   margin:0 30px;
   position: relative;
   background-color: pink;
+  .position{
+    position: absolute;
+    right: 25px;
+  }
   &--1{
     @include task-box;
   }
   &--1 p{
     @include task-show;
-  }
-  .TL-position{
-    position: absolute;
-    right: 25px;
   }
   &--2{
     @include task-box;
@@ -150,9 +158,47 @@
   &--2 p{
     @include task-show;
   }
-  .TC-position{
-    position: absolute;
-    right: 25px;
+  &--3{
+    @include task-box;
+  }
+  &--3 p{
+    @include task-show;
+  }
+  &--4{
+    @include task-box;
+  }
+  &--4 p{
+    @include task-show;
+  }
+  &--5{
+    @include task-box;
+  }
+  &--5 p{
+    @include task-show;
+  }
+  &--6{
+    @include task-box;
+  }
+  &--6 p{
+    @include task-show;
+  }
+  &--7{
+    @include task-box;
+  }
+  &--7 p{
+    @include task-show;
+  }
+  &--8{
+    @include task-box;
+  }
+  &--8 p{
+    @include task-show;
+  }
+  &--9{
+    @include task-box;
+  }
+  &--9 p{
+    @include task-show;
   }
 }
 

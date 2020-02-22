@@ -83,9 +83,12 @@ $(function() {
   image.src = "/assets/puzzle1.jpg";
 
   $('#modal-show').click(function(){
-    $('.task-modal').fadeIn(300);
+    $('.task-modal').fadeIn(250);
   });
 
+  $('#modal-close').click(function(){
+    $('.task-modal').fadeOut(250);
+  });
 
 
   $('#task-btn-1').click(function(){
@@ -97,15 +100,78 @@ $(function() {
     $('#top-left').toggle('shake');
   });
 
-
   $('#task-btn-2').click(function(){
     let task2 = $('#input-task-2').val();
     $('#task-show-2').text(task2);
   });
-
   $('.TC-btn').click(function(){
     $(this).toggleClass('is-checked');
     $('#top-center').toggle('shake');
   });
+
+  $('#task-btn-3').click(function(){
+    let task3 = $('#input-task-3').val();
+    $('#task-show-3').text(task3);
+  });
+  $('.TR-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#top-right').toggle('shake');
+  });
+
+  $('#task-btn-4').click(function(){
+    let task4 = $('#input-task-4').val();
+    $('#task-show-4').text(task4);
+  });
+  $('.CL-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#center-left').toggle('shake');
+  });
+
+  $('#task-btn-5').click(function(){
+    let task5 = $('#input-task-5').val();
+    $('#task-show-5').text(task5);
+  });
+  $('.CC-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#center-center').toggle('shake');
+  });
+
+  $('#task-btn-6').click(function(){
+    let task6 = $('#input-task-6').val();
+    $('#task-show-6').text(task6);
+  });
+  $('.CR-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#center-right').toggle('shake');
+  });
+
+  $('#task-btn-7').click(function(){
+    let task7 = $('#input-task-7').val();
+    $('#task-show-7').text(task7);
+  });
+  $('.BL-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#bottom-left').toggle('shake');
+  });
+
+  $('#task-btn-8').click(function(){
+    let task8 = $('#input-task-8').val();
+    $('#task-show-8').text(task8);
+  });
+  $('.BC-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#bottom-center').toggle('shake');
+  });
+
+  $('#task-btn-9').click(function(){
+    let task9 = $('#input-task-9').val();
+    $('#task-show-9').text(task9);
+  });
+  $('.BR-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#bottom-right').toggle('shake');
+  });
+
+
   }
 });
