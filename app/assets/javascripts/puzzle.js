@@ -82,9 +82,30 @@ $(function() {
     
   image.src = "/assets/puzzle1.jpg";
 
-  $('#CC-btn').click(function(){
-    $('#center-center').toggle('shake');
+  $('#modal-show').click(function(){
+    $('.task-modal').fadeIn(300);
   });
 
+
+
+  $('#task-btn-1').click(function(){
+    let task1 = $('#input-task-1').val();
+    $('#task-show-1').text(task1);
+  });
+  $('.TL-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#top-left').toggle('shake');
+  });
+
+
+  $('#task-btn-2').click(function(){
+    let task2 = $('#input-task-2').val();
+    $('#task-show-2').text(task2);
+  });
+
+  $('.TC-btn').click(function(){
+    $(this).toggleClass('is-checked');
+    $('#top-center').toggle('shake');
+  });
   }
 });
