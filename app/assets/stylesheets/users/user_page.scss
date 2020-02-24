@@ -13,23 +13,33 @@
     line-height: 60px;
   }
 
+  
 
 .user--info{
   margin: 90px auto 50px;
   height: 230px;
   width: 200px;
   &__name{
-    color: #fff;
+    color: black;
     text-align: center;
     font-size: 30px;
   }
   &__edit{
     text-decoration: none;
+    border-bottom: 1px solid blue;
     color: black;
     font-size: 18px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  &__edit:hover{
+    color: #4689FF;
   }
   
 }
+
+
 .icon_image {
   width: 150px;
   height: 150px;
@@ -44,14 +54,11 @@
   margin: 0 auto;
   &--name{
     text-align: center;
-    color: #fff;
+    color: black;
     font-size: 18px;
     padding-bottom: 10px;
   }
 }
-
-
-
 
 .contents{
   position: relative;
@@ -59,15 +66,23 @@
   &--menus{
     height: 65px;
     width: 100%;
-    background-color: #778899;
+    background-color: #74F9FF;
     display: flex;
     font-size: 20px;
     line-height: 65px;
     list-style: none;
-    color: #fff;
+    color: black;
   }
   &--menu{
     padding:0 20px;
+    cursor: pointer;
+  }
+  &--menu > p{
+    height: 48px;
+  }
+  &--menu > p:hover{
+    transition: all 0.3s ease 0s;
+    border-bottom: 3px solid #3366FF;
   }
 }
 
@@ -75,19 +90,53 @@
   cursor: pointer;
 }
 
-/* モーダル */
-.task-modal{
+.puzzle-modal{
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .6);
   display: none;
   z-index: 2;
+  position: absolute;
+  left: 100px;
+  width: 540px;
+  height: 130px;
+  border: 1px solid silver;
+  background-color: #fff;
+  border-radius: 10px;
+  &__title{
+    background-color: #E8FFE8;
+    height: 50px;
+    border-bottom: 1px solid silver;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    display: flex;
+  }
+  .puzzle__textbox{
+    width: 300px;
+  }
+}
+
+.puzzle-modal-close{
+  margin-left: 50px;
+  color: red;
+  cursor: pointer;
+}
+
+
+/* モーダル */
+.task-modal{
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .6);
+  display: none;
+  background-color: #fff;
+  z-index: 100;
   position: absolute;
   top: 0;
   right: 100px;
   width: 540px;
   height: 653px;
-  background-color: #fff;
   border-radius: 10px;
   border: 1px solid silver;
   &__title{
+    background-color: #E8FFE8;
     height: 50px;
     border-bottom: 1px solid silver;
     display: flex;
@@ -116,6 +165,7 @@
     padding-left: 5px;
   }
   &__input{
+    border-radius: 4px;
     margin-left: 10px;
     height: 30px;
     font-size: 20px;
@@ -141,7 +191,7 @@
   height: 548px;
   margin:0 30px;
   position: relative;
-  background-color: pink;
+  background-color: #E8FFE8;
   .position{
     position: absolute;
     right: 25px;

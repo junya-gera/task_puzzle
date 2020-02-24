@@ -82,6 +82,14 @@ $(function() {
     
   image.src = "/assets/puzzle1.jpg";
 
+  $('#puzzle-modal-show').click(function(){
+    $('.puzzle-modal').fadeIn(250);
+  });
+
+  $('#puzzle-modal-close').click(function(){
+    $('.puzzle-modal').fadeOut(250);
+  });
+
   $('#modal-show').click(function(){
     $('.task-modal').fadeIn(250);
   });
@@ -171,6 +179,9 @@ $(function() {
     $(this).toggleClass('is-checked');
     $('#bottom-right').toggle('shake');
   });
+
+    
+
 
 
   }

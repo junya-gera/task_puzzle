@@ -1,5 +1,7 @@
+
+
 .header {
-  background-color: #343a40;
+  background-color: #00E0FF;
   height: 65px;
   width: 100vw;
   position: fixed;
@@ -15,8 +17,12 @@
     padding:0 25px;
     &--link{
       font-size: 18px;
-      color: #fff;
+      color: black;
       text-decoration: none;
+    }
+    &--link:hover{
+      transition: all 0.3s ease 0s;
+      border-bottom: 3px solid #0066FF;
     }
   }
   .myname{
@@ -29,7 +35,7 @@
   display: flex;
   .sideMenu{
     width: 200px;
-    background-color: #c0c0c0;
+    background-color: #A6FFF2;
   }
   .contents{
     width: calc(100vw - 200px);

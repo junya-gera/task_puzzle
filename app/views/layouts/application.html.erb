@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,22 +17,24 @@
 <ul class="header__menus">
 
     <li class="header__menu">
+      <i class="fas fa-puzzle-piece fa-lg"></i>
       <%= link_to "タスクパズル", root_path, class: "header__menu--link" %>
     </li>
     <li class="header__menu">
+      <i class="fas fa-users fa-lg"></i>
       <%= link_to "ユーザー一覧", users_path, class: "header__menu--link" %>
     </li>
     <li class="header__menu">
+      <i class="fas fa-search fa-lg"></i>
       <%= link_to "ユーザー検索", root_path, class: "header__menu--link" %>
-    </li>
-    <li class="header__menu">
-      <%= link_to "パズル検索", root_path, class: "header__menu--link" %>
     </li>
     <% if user_signed_in? %>
     <li class="header__menu">
+      <i class="fas fa-sign-out-alt fa-lg"></i>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__menu--link" %>
     </li>
     <li class="header__menu myname">
+      <i class="fas fa-user fa-lg"></i>
       <%= link_to current_user.name, root_path, class: "header__menu--link" %>
     </li>
     <% end %>

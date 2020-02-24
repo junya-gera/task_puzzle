@@ -70,3 +70,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'webpacker', github: 'rails/webpacker'
 gem "font-awesome-sass"
+gem 'pry-rails'

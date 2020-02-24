@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     root :to => "devise/sessions#new"
 end
-
-  resources :users,   only: [:index, :show, :edit, :update]
-  # get 'show', controller: :users, as: 'mypage'
-
+  resources :users,   only: [:index, :show, :edit, :update] do
+    resources :puzzles, only: [:new, :create]
+  end
 end
+

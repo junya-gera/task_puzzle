@@ -17,13 +17,11 @@
     <div class="puzzle--list">
 
       <div class="puzzle--list--name">
-        <p>Progate HTML&CSS</p>
-      </div>
-      <div class="puzzle--list--name">
-        <p>Progate RubyonRails</p>
-      </div>
-      <div class="puzzle--list--name">
-        <p>ドットインストール JavaScript</p>
+        <% if @puzzle %>
+          <p><%= @puzzle.title %></p>
+        <% else %>
+          <p>パズルが作成されていません</p>
+        <% end %>
       </div>
 
     </div> 
@@ -33,7 +31,7 @@
 
     <ul class="contents--menus">
       <li class="contents--menu">
-        <p>新規パズル作成</p>
+        <p id="puzzle-modal-show">新規パズル作成</p>
       </li>
       <li class="contents--menu">
         <p>パズル削除</p>
@@ -42,6 +40,15 @@
         <p id="modal-show">タスク編集</p>
       </li>
     </ul>
+
+    <div class="puzzle-modal">
+      <div class="puzzle-modal__title">
+        <p>パズルのタイトルを入力してください</p>
+        <i class="far fa-window-close puzzle-modal-close fa-2x" id="puzzle-modal-close"></i>
+
+      </div>
+    </div>
+
 
     <div class="task-modal">
       <div class="task-modal__title">
