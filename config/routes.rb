@@ -7,5 +7,8 @@ end
   resources :users,   only: [:index, :show, :edit, :update] do
     resources :puzzles, only: [:new, :create]
   end
+  resources :tasks, only: [:new, :create]
+  
+  
 end
 

@@ -15,10 +15,12 @@
 
     </div>  
     <div class="puzzle--list">
-
+      <p class="puzzle--list--title">パズル一覧</p> 
       <div class="puzzle--list--name">
-        <% if @puzzle %>
-          <p><%= @puzzle.title %></p>
+        <% if @puzzles != nil %>
+          <% @puzzles.each do |puzzle| %>
+            <p><%= puzzle.title %></p>
+          <% end %>
         <% else %>
           <p>パズルが作成されていません</p>
         <% end %>
@@ -30,6 +32,7 @@
   <div class="contents">
 
     <ul class="contents--menus">
+      
       <li class="contents--menu">
         <p id="puzzle-modal-show">新規パズル作成</p>
       </li>
@@ -45,7 +48,12 @@
       <div class="puzzle-modal__title">
         <p>パズルのタイトルを入力してください</p>
         <i class="far fa-window-close puzzle-modal-close fa-2x" id="puzzle-modal-close"></i>
-
+      </div>
+      <div class="puzzle-modal-input">
+        <%= form_for(@puzzle, url: user_puzzles_path(user_id: current_user.id)) do |f|  %>
+        <%= f.text_field :title, placeholder: "パズルのタイトルを入力",class: "puzzle-title-input" %>
+        <%= f.submit "決定",class: "ok-btn" %>
+        <% end %>
       </div>
     </div>
 
@@ -58,56 +66,74 @@
 
       <div class="task-modal__edit">
         <p>タスク1</p>
-        <input id="input-task-1" class="task-modal__input">
-        <button id="task-btn-1" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
       <div class="task-modal__edit">
         <p>タスク2</p>
-        <input id="input-task-2" class="task-modal__input">
-        <button id="task-btn-2" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
       <div class="task-modal__edit">
         <p>タスク3</p>
-        <input id="input-task-3" class="task-modal__input">
-        <button id="task-btn-3" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>    
       </div>
 
       <div class="task-modal__edit">
         <p>タスク4</p>
-        <input id="input-task-4" class="task-modal__input">
-        <button id="task-btn-4" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
       <div class="task-modal__edit">
         <p>タスク5</p>
-        <input id="input-task-5" class="task-modal__input">
-        <button id="task-btn-5" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
       <div class="task-modal__edit">
         <p>タスク6</p>
-        <input id="input-task-6" class="task-modal__input">
-        <button id="task-btn-6" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
       <div class="task-modal__edit">
         <p>タスク7</p>
-        <input id="input-task-7" class="task-modal__input">
-        <button id="task-btn-7" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
       <div class="task-modal__edit">
         <p>タスク8</p>
-        <input id="input-task-8" class="task-modal__input">
-        <button id="task-btn-8" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
       <div class="task-modal__edit">
         <p>タスク9</p>
-        <input id="input-task-9" class="task-modal__input">
-        <button id="task-btn-9" class="task-modal__btn">決定</button>
+        <%= form_with(model: @task, local: true, id: "input-task-1") do |f| %>
+        <%= f.text_field :content, placeholder: "タスクを入力", class: "task-modal__input" %>
+        <%= f.submit '決定',id:"task-btn-1" , class:"task-modal__btn" %>
+        <%end %>
       </div>
 
     </div>
@@ -118,7 +144,11 @@
 
         <div class="task--1">
           <p>タスク1:</p>
-          <p id="task-show-1">タスクが設定されていません</p>
+          <% if @tasks[0] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[0].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox" class="TL-btn">
             <label for="checkbox"></label>
@@ -127,7 +157,11 @@
 
         <div class="task--2">
           <p>タスク2:</p>
-          <p id="task-show-2">タスクが設定されていません</p>
+          <% if @tasks[1] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[1 ].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox2" class="TC-btn">
             <label for="checkbox2"></label>
@@ -136,7 +170,11 @@
 
         <div class="task--3">
           <p>タスク3:</p>
-          <p id="task-show-3">タスクが設定されていません</p>
+          <% if @tasks[2] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[2].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox3" class="TR-btn">
             <label for="checkbox3"></label>
@@ -145,7 +183,11 @@
 
         <div class="task--4">
           <p>タスク4:</p>
-          <p id="task-show-4">タスクが設定されていません</p>
+          <% if @tasks[3] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[3].content %></p>
+          <% end %>
           <div class="round position">
             <input type="checkbox" id="checkbox4" class="CL-btn">
             <label for="checkbox4"></label>
@@ -154,7 +196,11 @@
 
         <div class="task--5">
           <p>タスク5:</p>
-          <p id="task-show-5">タスクが設定されていません</p>
+          <% if @tasks[4] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[4].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox5" class="CC-btn">
             <label for="checkbox5"></label>
@@ -163,7 +209,11 @@
 
         <div class="task--6">
           <p>タスク6:</p>
-          <p id="task-show-6">タスクが設定されていません</p>
+          <% if @tasks[5] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[5].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox6" class="CR-btn">
             <label for="checkbox6"></label>
@@ -172,7 +222,11 @@
 
         <div class="task--7">
           <p>タスク7:</p>
-          <p id="task-show-7">タスクが設定されていません</p>
+          <% if @tasks[6] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[6].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox7" class="BL-btn">
             <label for="checkbox7"></label>
@@ -181,7 +235,11 @@
 
         <div class="task--8">
           <p>タスク8:</p>
-          <p id="task-show-8">タスクが設定されていません</p>
+          <% if @tasks[7] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[7].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox8" class="BC-btn">
             <label for="checkbox8"></label>
@@ -190,7 +248,11 @@
 
         <div class="task--9">
           <p>タスク9:</p>
-          <p id="task-show-9">タスクが設定されていません</p>
+          <% if @tasks[8] === nil %>
+            <p>タスクが入力されていません</p>
+          <% else %>
+            <p><%= @tasks[8].content %></p>
+          <% end %>     
           <div class="round position">
             <input type="checkbox" id="checkbox9" class="BR-btn">
             <label for="checkbox9"></label>

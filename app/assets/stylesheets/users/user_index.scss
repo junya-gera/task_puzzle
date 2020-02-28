@@ -2,16 +2,17 @@
   height: 65px;
     width: 100%;
     background-color: #74f9FF;
-    font-size: 20px;
+    font-size: 35px;
+    text-align: center;
     line-height: 65px;
     color: black;
-    padding-left: 40px;
 }
 
 .user--index{
   width: 1000px;
   height: 500px;
   background-color: #A6FFF2;
+  border: 2px solid #00E0FF;
   margin: 50px auto 0;
   padding: 50px;
   overflow: scroll;
@@ -20,16 +21,21 @@
 .user{
   height: 230px;
   width: 100%;
-  border-top: 1px solid silver;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px rgb(0,0,200);
+  background-color: #00E0FF;
   display: flex;
   align-items: center;
 
   &__right{
-    color: black;
-    font-size: 40px;
+    font-size: 35px;
     padding-left: 30px;
     &--name{
       text-decoration: none;
+      color: black;
+    }
+    &--name:hover{
+      opacity: 0.7;
     }
   }
 }

@@ -9,6 +9,10 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @puzzle = Puzzle.new
+    @puzzles = @user.puzzles
+    @task = Task.new
+    @tasks = Task.all
   end
 
   def edit
@@ -22,6 +26,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
 
   private
   def user_params
