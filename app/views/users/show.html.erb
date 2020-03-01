@@ -19,7 +19,7 @@
       <div class="puzzle--list--name">
         <% if @puzzles != nil %>
           <% @puzzles.each do |puzzle| %>
-            <p><%= puzzle.title %></p>
+            <p class="puzzle-title"><%= puzzle.title %></p>
           <% end %>
         <% else %>
           <p>パズルが作成されていません</p>
