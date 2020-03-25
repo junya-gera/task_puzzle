@@ -80,7 +80,7 @@ $(function() {
     lineCtx.stroke();
   };
     
-  image.src = "/assets/inu2.png";
+  image.src = "/assets/usagi2.png";
 
   $('#puzzle-modal-show').click(function(){
     $('.puzzle-modal').fadeIn(250);
@@ -140,7 +140,7 @@ $(function() {
     let task5 = $('#input-task-5').val();
     $('#task-show-5').text(task5);
   });
-  $('.TL-btn').click(function(){
+  $('.BL-btn').click(function(){
     $(this).toggleClass('is-checked');
     $('#center-center').toggle('shake');
   });
@@ -149,7 +149,7 @@ $(function() {
     let task6 = $('#input-task-6').val();
     $('#task-show-6').text(task6);
   });
-  $('.BL-btn').click(function(){
+  $('.TL-btn').click(function(){
     $(this).toggleClass('is-checked');
     $('#center-right').toggle('shake');
   });
